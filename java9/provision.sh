@@ -8,9 +8,6 @@ echo "Installing Java 9"
 
 # Install prerequisites.
 sudo apt-get install -y python-software-properties debconf-utils &>/dev/null
-echo "Adding ppa:webupd8team/java repository"
-sudo apt-add-repository -y ppa:webupd8team/java &>/dev/null
-sudo apt-get update &>/dev/null
 
 # Licensing.
 echo "Installing this utility means you have AGREED to the Oracle Binary Code"
@@ -19,4 +16,4 @@ echo "http://www.oracle.com/technetwork/java/javase/terms/license/index.html"
 echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
 
 # Install Java.
-sudo apt-get install -y oracle-java9-installer
+sudo apt-get install -y default-jre default-jdk
